@@ -21,6 +21,7 @@ app.get('/user/:name', (req, res) => {
   res.send(`<h1>Welcome, ${userName}</h1>`); // Vulnerável a XSS
 });
 
+
 // Rota vulnerável a CSRF (Cross-Site Request Forgery)
 app.post('/transfer', (req, res) => {
   const amount = req.body.amount;
